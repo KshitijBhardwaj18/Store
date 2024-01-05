@@ -4,7 +4,7 @@ import { ColumnDef } from "@tanstack/react-table"
 import { CellAction } from "./cell-action"
 
 
-export type ProductCollumn = {
+export type ProductColumn = {
   id: string;
   name: string;
   price: string;
@@ -16,7 +16,7 @@ export type ProductCollumn = {
   createdAt: string;
 }
 
-export const columns: ColumnDef<BillboardCollumn  >[] = [
+export const columns: ColumnDef<ProductColumn>[] = [
   {
     accessorKey: "name",
     header: "Name",

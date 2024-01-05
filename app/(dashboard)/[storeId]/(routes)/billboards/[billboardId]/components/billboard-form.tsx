@@ -92,9 +92,9 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
       await axios.delete(`/api/${params.storeId}/billboards/${params.billboardId}`);
       router.refresh();
       router.push("/");
-      toast.success("Stores deleted");
+      toast.success("Billboars deleted");
     } catch (error) {
-      toast.error("Make sure you removed all the products and categories");
+      toast.error("Make sure you removed all categories");
     } finally {
       setLoading(false);
       setOpen(false);

@@ -6,7 +6,7 @@ import {ProductClient} from "./components/client";
 
 import { formatter } from "@/lib/utils";
 
-import {ProductCollumn} from "./components/columns";
+import {ProductColumn} from "./components/columns";
 
 const ProductsPage = async (
     {params} :  {params : {storeId: string}}
@@ -29,7 +29,7 @@ const ProductsPage = async (
         }
     );
 
-    const formattedProducts: ProductCollumn[] = products.map((item) => ({
+    const formattedProducts: ProductColumn[] = products.map((item) => ({
         id: item.id,
         name: item.name,
         isFeatured: item.isFeatured,
