@@ -4,7 +4,7 @@ import prismadb from "@/lib/prismadb";
 
 import {BillboardClient} from "./components/client";
 
-import { BillboardCollumn } from "./components/columns";
+import { BillboardColumn } from "./components/columns";
 
 const BillboardsPage = async (
     {params} :  {params : {storeId: string}}
@@ -21,7 +21,7 @@ const BillboardsPage = async (
         }
     );
 
-    const formattedBillboards: BillboardCollumn[] = billboards.map((item) => ({
+    const formattedBillboards: BillboardColumn[] = billboards.map((item) => ({
         id: item.id,
         label: item.label,
         createdAt: format(item.createdAt, "MMMM do, yyyy")
